@@ -5,8 +5,9 @@ import MealsByName from '../src/views/MealsByName.vue'
 import MealsDetails from '../src/views/MealsDetails.vue'
 import MealsByIngredient from '../src/views/MealsByIngredient.vue'
 import DefaultLayout from '../src/components/DefaultLayout.vue'
-import GuestLayout from '../src/components/GuestLayout.vue'
+import RegisterUser from '../src/views/RegisterUser.vue'
 import Ingredient from '../src/views/Ingredients.vue'
+import Authentication from '../src/views/Authentication.vue'
 
 const routes = [{
     path: '/',
@@ -17,6 +18,7 @@ const routes = [{
         component: Home,
 
     },
+    
         {
     path: "/by-letter/:letter?",
     name: "byLetter",
@@ -50,16 +52,21 @@ const routes = [{
 },
 
 {
-    path: '/guest',
+    path: '/auth',
     name: 'login',
-    component: GuestLayout,
-}
+    component: Authentication,
+},
+{
+    path: '/register',
+    name: 'signup',
+    component: RegisterUser,
+},
 ]
 
 
-const router = new createRouter({
+const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
     
 })
 

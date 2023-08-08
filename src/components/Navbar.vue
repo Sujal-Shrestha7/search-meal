@@ -5,7 +5,7 @@
                 </router-link>
                 <div class="flex item-center gap-1 px-5">
                     <router-link :to="{ name: 'byIngredient' }" class="inline-flex transition-colors px-2 py-5 h-full hover:bg-purple-100">
-                        Search Meals
+                        Get Menu
                     </router-link>
                     <router-link :to="{ name: 'byLetter' }" class="inline-flex transition-colors px-2 py-5 h-full hover:bg-purple-100">
                         Meals by Letter
@@ -16,10 +16,19 @@
                     <router-link :to="{ name: 'ingredients' }" class="inline-flex transition-colors px-2 py-5 h-full hover:bg-purple-100">
                         Ingredients
                     </router-link>
+                    <router-link :to="{ name: 'login' }" class="inline-flex transition-colors px-2 py-5 h-full bg-orange-500 text-white">
+                        Login
+                    </router-link>
                 </div>
             </header>
 </template>
 
 <script setup>
+// import axiosInterceptor from '../views/Authentication.vue'
+
+// function buttonClicked(){
+//    const response = axiosInterceptor.get('/menu')
+//     console.log(response)
+// }
 
 </script>
